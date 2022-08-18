@@ -1,0 +1,10 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/codj2387/public_html/welikework.codignore.com
+    - /bin/cp public/index.php $DEPLOYPATH
+    - /bin/cp -R public/css $DEPLOYPATH
+    - /bin/cp -R public/fonts $DEPLOYPATH
+    - /bin/cp -R public/img $DEPLOYPATH
+    - /bin/cp -R public/js $DEPLOYPATH
+    - /bin/cp -R public/scss $DEPLOYPATH
