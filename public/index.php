@@ -31,8 +31,8 @@ if (file_exists($maintenance = __DIR__.'/../storage/framework/maintenance.php'))
 |
 */
 
-// require __DIR__.'/../../repositories/welikework/vendor/autoload.php';
-require '/home/codj2387/repositories/welikework/vendor/autoload.php';
+require __DIR__.'/../vendor/autoload.php';
+// require '/home/codj2387/repositories/welikework/vendor/autoload.php';
 
 /*
 |--------------------------------------------------------------------------
@@ -45,8 +45,8 @@ require '/home/codj2387/repositories/welikework/vendor/autoload.php';
 |
 */
 
-// $app = require_once __DIR__.'/home/codj2387/repositories/welikework/bootstrap/app.php';
-$app = require_once '/home/codj2387/repositories/welikework/bootstrap/app.php';
+$app = require_once __DIR__.'/../bootstrap/app.php';
+// $app = require_once '/home/codj2387/repositories/welikework/bootstrap/app.php';
 
 $kernel = $app->make(Kernel::class);
 

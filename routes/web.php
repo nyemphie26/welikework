@@ -13,9 +13,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/login', function () {
-    return view('auth.signin');
+Route::get('/', function () {
+    return view('signin');
 });
 Route::get('/register', function () {
     return view('signup');
-});
+})->name('Sign Up');
+Route::get('/dashboard', function () {
+    return view('Auth.dashboard');
+})->name('Dashboard');
+
+Route::get('/incoming', function () {
+    return view('Auth.incoming.incoming');
+})->name('Incoming Works');
+Route::get('/edit-add-incoming', function () {
+    return view('Auth.incoming.edit-add');
+})->name('Incoming Works Edit Add');
