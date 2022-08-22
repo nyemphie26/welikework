@@ -137,77 +137,91 @@
         </div>
     </div>
 
+    
     <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal modal-lg fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title font-weight-normal" id="exampleModalLabel">New Work</h5>
+            <h5 class="modal-title font-weight-normal" id="exampleModalLabel">John Michael - Mowing - Req Date ( 8/18/2022 )</h5>
             <button type="button" class="btn-close text-dark" data-bs-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <div class="modal-body">
             <div class="row">
-              <div class="col-lg-6">
+              <div class="col-lg-4">
                 <div class="input-group input-group-static mb-4">
-                  <label >Phone Number</label>
-                  <input type="text" class="form-control" value="555 555 55555" readonly>
-                </div>
-                <div class="input-group input-group-static mb-4">
-                  <label >Email</label>
-                  <input type="text" class="form-control" value="sample@mail.com" readonly>
-                </div>
-                <div class="input-group input-group-static mb-4">
-                  <label >Service Type</label>
-                  <input type="text" class="form-control" value="Mowing" readonly>
-                </div>
-                
-                <div class="input-group input-group-static mb-4">
-                  <label >Work Type</label>
-                  <input type="text" class="form-control" value="Bi Weekly" readonly>
+                    <label >Customer's Name</label>
+                    <input type="text" class="form-control" value="John Michael" readonly>
                 </div>
               </div>
-              <div class="col-lg-6">
+              <div class="col-lg-4">
                 <div class="input-group input-group-static mb-4">
-                  <label >First Name</label>
-                  <input type="text" class="form-control" value="John" readonly>
+                    <label >Email</label>
+                    <input type="text" class="form-control" value="john@creative-tim.com" readonly>
                 </div>
+              </div>
+              <div class="col-lg-4">
                 <div class="input-group input-group-static mb-4">
-                  <label >Last Name</label>
-                  <input type="text" class="form-control" value="Michael" readonly>
-                </div>
-                <div class="input-group input-group-static mb-4">
-                  <label >Works / Pick Up Location</label>
-                  <input type="text" class="form-control" value="123 Main st" readonly>
-                </div>
-                <div class="input-group input-group-static mb-4">
-                  <label >Drop Off Location</label>
-                  <input type="text" class="form-control" readonly>
+                    <label >Phone Number</label>
+                    <input type="text" class="form-control" value="555 555 5555" readonly>
                 </div>
               </div>
             </div>
             <div class="row">
-              <div class="col-lg-12">
-                <div class="input-group input-group-static my-3">
-                  <label>Scheduling Date</label>
-                  <input type="datetime-local" class="form-control" readonly>
+                <div class="col-lg-3">
+                    <div class="input-group input-group-static mb-4">
+                        <label >Service Type</label>
+                        <input type="text" class="form-control" value="Mowing" readonly>
+                    </div>
                 </div>
-              </div>
+                <div class="col-lg-3">
+                    <div class="input-group input-group-static mb-4">
+                        <label >Work Type</label>
+                        <input type="text" class="form-control" value="Bi Weekly" readonly>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="input-group input-group-static mb-4">
+                        <label >Requested Date</label>
+                        <input type="text" class="form-control" value="8/18/2022 - 10:00 AM" readonly>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="input-group input-group-static mb-4">
+                        <label >Total Fees</label>
+                        <input type="text" class="form-control" value="$80.00" readonly>
+                    </div>
+                </div>
             </div>
             <div class="row">
-              <div class="col-lg-6">
-                <div class="input-group input-group-static mb-4">
-                  <label >Customer's Note</label>
-                  <input type="text" class="form-control" value="Call me when arrives home" readonly>
+                <div class="col-lg-6">
+                    <div class="input-group input-group-static mb-4">
+                        <label >Works / Pick Up Location</label>
+                        <input type="text" class="form-control" value="123 Main st" readonly>
+                    </div>
                 </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="input-group input-group-static mb-4">
-                  <label >Known Preference</label>
-                  <input type="text" class="form-control" value="Muddy Land" readonly>
+                <div class="col-lg-6">
+                    <div class="input-group input-group-static mb-4">
+                        <label >Drop Off Location</label>
+                        <input type="text" class="form-control" readonly>
+                    </div>
                 </div>
-              </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="input-group input-group-static mb-4">
+                        <label >Customer's Note</label>
+                        <textarea class="form-control" rows="3" spellcheck="false" readonly>Call me when arrives home</textarea>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="input-group input-group-static mb-4">
+                        <label >Known Preference</label>
+                        <textarea class="form-control" rows="3" spellcheck="false" readonly>Muddy Land</textarea>
+                    </div>
+                </div>
             </div>
           </div>
           <div class="modal-footer justify-content-center">
