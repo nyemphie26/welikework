@@ -14,6 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    return view('welcome');
+});
+Route::get('/login', function () {
     return view('signin');
 });
 Route::get('/register', function () {
@@ -23,9 +26,20 @@ Route::get('/dashboard', function () {
     return view('Auth.dashboard');
 })->name('Dashboard');
 
+// ------- Incoming
 Route::get('/incoming', function () {
     return view('Auth.incoming.incoming');
 })->name('Incoming Works');
 Route::get('/edit-add-incoming', function () {
     return view('Auth.incoming.edit-add');
 })->name('Incoming Works Edit Add');
+
+// ------- Accepted
+Route::get('/accepted', function () {
+    return view('Auth.accepted.index');
+})->name('Accepted Works');
+
+// ------- Finished
+Route::get('/finished', function () {
+    return view('Auth.finished.index');
+})->name('Finished Works');
