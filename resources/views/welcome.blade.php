@@ -19,7 +19,7 @@
   <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('img/apple-icon.png') }}">
   <link rel="icon" type="image/png" href="{{ asset('img/favicon.png') }}">
   <title>
-    Material Kit 2 by Creative Tim
+    We Like Work
   </title>
   <!--     Fonts and icons     -->
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
@@ -31,7 +31,12 @@
   <!-- Material Icons -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
   <!-- CSS Files -->
-  <link id="pagestyle" href="{{ asset('css/material-kit.css?v=3.0.2') }}" rel="stylesheet" />
+  <link id="pagestyle" href="{{ asset('css/material-dashboard.css?v=3.0.4') }}" rel="stylesheet" />
+  <link rel="stylesheet" href="{{ asset('css/card-pricing.css') }}">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }</style>
 </head>
 
 <body class="about-us bg-gray-200">
@@ -39,7 +44,7 @@
   <nav class="navbar navbar-expand-lg position-absolute top-0 z-index-3 w-100 shadow-none my-3  navbar-transparent ">
     <div class="container">
       <a class="navbar-brand  text-white " href="https://demos.creative-tim.com/material-kit/presentation" rel="tooltip" title="Designed and Coded by Creative Tim" data-placement="bottom" target="_blank">
-        Material Kit 2
+        We Like Work
       </a>
       <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon mt-2">
@@ -50,7 +55,7 @@
       </button>
       <div class="collapse navbar-collapse w-100 pt-3 pb-2 py-lg-0 ms-lg-12 ps-lg-5" id="navigation">
         <ul class="navbar-nav navbar-nav-hover ms-auto">
-          <li class="nav-item dropdown dropdown-hover mx-2 ms-lg-6">
+          {{-- <li class="nav-item dropdown dropdown-hover mx-2 ms-lg-6">
             <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center" id="dropdownMenuPages8" data-bs-toggle="dropdown" aria-expanded="false">
               <i class="material-icons opacity-6 me-2 text-md">dashboard</i>
               Pages
@@ -406,15 +411,19 @@
                 </div>
               </div>
             </ul>
-          </li>
-          <li class="nav-item ms-lg-auto">
+          </li> --}}
+          {{-- <li class="nav-item ms-lg-auto">
             <a class="nav-link nav-link-icon me-2" href="https://github.com/creativetimofficial/soft-ui-design-system" target="_blank">
-              <i class="fa fa-github me-1"></i>
-              <p class="d-inline text-sm z-index-1 font-weight-bold" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Star us on Github">Github</p>
             </a>
-          </li>
+          </li> --}}
           <li class="nav-item my-auto ms-3 ms-lg-0">
-            <a href="https://www.creative-tim.com/product/material-kit-pro" class="btn btn-sm  bg-white  mb-0 me-1 mt-2 mt-md-0">Upgrade to Pro</a>
+            <a href="/register" class="btn btn-sm mb-0 me-1 mt-2 mt-md-0">
+              <p class="d-inline text-sm z-index-1 font-weight-bold">Register</p>
+            </a>
+            /
+            <a href="/login" class="btn btn-sm mb-0 me-1 mt-2 mt-md-0">
+              <p class="d-inline text-sm z-index-1 font-weight-bold">Login</p>
+            </a>
           </li>
         </ul>
       </div>
@@ -423,14 +432,17 @@
   <!-- End Navbar -->
   <!-- -------- START HEADER 7 w/ text and video ------- -->
   <header class="bg-gradient-dark">
-    <div class="page-header min-vh-75" style="background-image: url('{{ asset('img/bg9.jpg') }}');">
+    <div class="page-header min-vh-75" style="background-image: url('{{ asset('img/bg3.jpg') }}');">
       <span class="mask bg-gradient-dark opacity-6"></span>
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-8 text-center mx-auto my-auto">
-            <h1 class="text-white">Work with an amazing design</h1>
-            <p class="lead mb-4 text-white opacity-8">We’re constantly trying to express ourselves and actualize our dreams. If you have the opportunity to play this game</p>
-            <button type="submit" class="btn bg-white text-dark">Create Account</button>
+            <h1 class="text-white">WeLikeWork.ca</h1>
+            {{-- <p class="lead mb-4 text-white opacity-8">Getting work done in Cumberland County</p> --}}
+            <p class="lead mb-4 text-white opacity-8">Property management & odd job service provider servicing Amherst, Nova Scotia and Cumberland County.</p>
+            <a href="#register">
+              <button type="submit" class="btn btn-lg bg-gradient-success text-light font-weight-bold" id="shrinkBtn">Get Work ?</button>
+            </a>
             <h6 class="text-white mb-2 mt-5">Find us on</h6>
             <div class="d-flex justify-content-center">
               <a href="javascript:;"><i class="fab fa-facebook text-lg text-white me-4"></i></a>
@@ -453,15 +465,15 @@
             <div class="row justify-content-start">
               <div class="col-md-6">
                 <div class="info">
-                  <i class="material-icons text-3xl text-gradient text-info mb-3">public</i>
-                  <h5>Fully integrated</h5>
+                  <i class="material-icons text-3xl text-gradient text-success mb-3">public</i>
+                  <h5>Professional</h5>
                   <p>We get insulted by others, lose trust for those We get back freezes</p>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="info">
-                  <i class="material-icons text-3xl text-gradient text-info mb-3">payments</i>
-                  <h5>Payments functionality</h5>
+                  <i class="material-icons text-3xl text-gradient text-success mb-3">3p</i>
+                  <h5>Trusted</h5>
                   <p>We get insulted by others, lose trust for those We get back freezes</p>
                 </div>
               </div>
@@ -469,15 +481,15 @@
             <div class="row justify-content-start mt-4">
               <div class="col-md-6">
                 <div class="info">
-                  <i class="material-icons text-3xl text-gradient text-info mb-3">apps</i>
-                  <h5>Prebuilt components</h5>
+                  <i class="material-icons text-3xl text-gradient text-success mb-3">payment</i>
+                  <h5>Affordable Fee</h5>
                   <p>We get insulted by others, lose trust for those We get back freezes</p>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="info">
-                  <i class="material-icons text-3xl text-gradient text-info mb-3">3p</i>
-                  <h5>Improved platform</h5>
+                  <i class="material-icons text-3xl text-gradient text-success mb-3">apps</i>
+                  <h5>Various Odd Jobs</h5>
                   <p>We get insulted by others, lose trust for those We get back freezes</p>
                 </div>
               </div>
@@ -492,12 +504,14 @@
               </div>
               <div class="card-body text-center">
                 <h5 class="font-weight-normal">
-                  <a href="javascript:;">Get insights on Search</a>
+                  <a href="javascript:;">Get Your Work Done</a>
                 </h5>
                 <p class="mb-0">
-                  Website visitors today demand a frictionless user expericence — especially when using search. Because of the hight standards.
+                  Make a request, let us take care your odd job.
                 </p>
-                <button type="button" class="btn bg-gradient-info btn-sm mb-0 mt-3">Find out more</button>
+                <a href="#register">
+                  <button type="button" class="btn bg-gradient-success btn-sm mb-0 mt-3">Get Work</button>
+                </a>
               </div>
             </div>
           </div>
@@ -510,90 +524,125 @@
       <div class="container">
         <div class="row">
           <div class="col-md-8 text-start mb-5 mt-5">
-            <h3 class="text-white z-index-1 position-relative">The Executive Team</h3>
-            <p class="text-white opacity-8 mb-0">There’s nothing I really wanted to do in life that I wasn’t able to get good at. That’s my skill.</p>
+            <h3 class="text-white z-index-1 position-relative">Price List</h3>
+            <p class="text-white opacity-8 mb-0">Get the estimate by this table.</p>
           </div>
         </div>
-        <div class="row">
-          <div class="col-lg-6 col-12">
-            <div class="card card-profile mt-4">
-              <div class="row">
-                <div class="col-lg-4 col-md-6 col-12 mt-n5">
-                  <a href="javascript:;">
-                    <div class="p-3 pe-md-0">
-                      <img class="w-100 border-radius-md shadow-lg" src="{{ asset('img/team-5.jpg') }}" alt="image">
-                    </div>
-                  </a>
-                </div>
-                <div class="col-lg-8 col-md-6 col-12 my-auto">
-                  <div class="card-body ps-lg-0">
-                    <h5 class="mb-0">Emma Roberts</h5>
-                    <h6 class="text-info">UI Designer</h6>
-                    <p class="mb-0">Artist is a term applied to a person who engages in an activity deemed to be an art.</p>
-                  </div>
-                </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-3">
+            <div class="card mb-5" data-animation="true" style="height: 450px">
+              <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+                <a class="d-block blur-shadow-image">
+                  <img src="{{ asset('img/products/product-1-min.jpg') }}" alt="img-blur-shadow" class="img-fluid shadow border-radius-lg">
+                </a>
+              </div>
+              <div class="card-body">
+                <h5 class="font-weight-normal mt-3 text-center">
+                  <a href="javascript:;">Lawn Care</a>
+                </h5>
+                <p class="mb-0">
+                    1) Small Lawn $0 <br>
+                    2) Medium Lawn +$20 <br>
+                    3) Large Lawn +$35 <br>
+                    4) Extra Large Lawn +$60 <br>
+                </p>
+              </div>
+              <hr class="dark horizontal my-0">
+              <div class="card-footer text-center">
+                <p class="font-weight-normal my-auto">Starting at $40</p>
               </div>
             </div>
           </div>
-          <div class="col-lg-6 col-12">
-            <div class="card card-profile mt-lg-4 mt-5">
-              <div class="row">
-                <div class="col-lg-4 col-md-6 col-12 mt-n5">
-                  <a href="javascript:;">
-                    <div class="p-3 pe-md-0">
-                      <img class="w-100 border-radius-md shadow-lg" src="{{ asset('img/bruce-mars.jpg') }}" alt="image">
-                    </div>
-                  </a>
-                </div>
-                <div class="col-lg-8 col-md-6 col-12 my-auto">
-                  <div class="card-body ps-lg-0">
-                    <h5 class="mb-0">William Pearce</h5>
-                    <h6 class="text-info">Boss</h6>
-                    <p class="mb-0">Artist is a term applied to a person who engages in an activity deemed to be an art.</p>
-                  </div>
-                </div>
+          <div class="col-lg-3">
+            <div class="card mb-5" data-animation="true" style="height: 550px">
+              <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+                <a class="d-block blur-shadow-image">
+                  <img src="{{ asset('img/products/product-7-min.jpg') }}" alt="img-blur-shadow" class="img-fluid shadow border-radius-lg">
+                </a>
+              </div>
+              <div class="card-body">
+                <h5 class="font-weight-normal mt-3 text-center">
+                  <a href="javascript:;">Junk Removal</a>
+                </h5>
+                <p class="mb-0">
+                  1) Construction & Demolition ($98 per pound) <br>
+                  2) Cardboard ($88 per pound) <br>
+                  3) Recyclables ($88 per pound) <br>
+                  4) Wood ($79 per pound) <br>
+                  5) Shingles ($35 per pound) <br>
+                  6) Organics ($35 per pound) <br>
+                </p>
+              </div>
+              <hr class="dark horizontal my-0">
+              <div class="card-footer text-center">
+                <p class="font-weight-normal my-auto">Starting at $75</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="card mb-5" data-animation="true" style="height: 450px">
+              <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+                <a class="d-block blur-shadow-image">
+                  <img src="{{ asset('img/products/product-4-min.jpg') }}" alt="img-blur-shadow" class="img-fluid shadow border-radius-lg">
+                </a>
+              </div>
+              <div class="card-body">
+                <h5 class="font-weight-normal mt-3 text-center">
+                  <a href="javascript:;">Item Transport</a>
+                </h5>
+                <p class="mb-0">
+                    Base Fee + $0.54/Km
+                </p>
+              </div>
+              <hr class="dark horizontal my-0">
+              <div class="card-footer text-center">
+                <p class="font-weight-normal my-auto">Starting at $75</p>
               </div>
             </div>
           </div>
         </div>
-        <div class="row mt-4">
-          <div class="col-lg-6 col-12">
-            <div class="card card-profile mt-4 z-index-2">
-              <div class="row">
-                <div class="col-lg-4 col-md-6 col-12 mt-n5">
-                  <a href="javascript:;">
-                    <div class="p-3 pe-md-0">
-                      <img class="w-100 border-radius-md shadow-lg" src="{{ asset('img/ivana-squares.jpg') }}" alt="image">
-                    </div>
-                  </a>
-                </div>
-                <div class="col-lg-8 col-md-6 col-12 my-auto">
-                  <div class="card-body ps-lg-0">
-                    <h5 class="mb-0">Ivana Flow</h5>
-                    <h6 class="text-info">Athlete</h6>
-                    <p class="mb-0">Artist is a term applied to a person who engages in an activity deemed to be an art.</p>
-                  </div>
-                </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-3">
+            <div class="card mb-5" data-animation="true" style="height: 450px">
+              <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+                <a class="d-block blur-shadow-image">
+                  <img src="{{ asset('img/products/product-5-min.jpg') }}" alt="img-blur-shadow" class="img-fluid shadow border-radius-lg">
+                </a>
+              </div>
+              <div class="card-body">
+                <h5 class="font-weight-normal mt-3 text-center">
+                  <a href="javascript:;">Odd Jobs</a>
+                </h5>
+                <p class="mb-0">
+                  1) Post hole digging +$25 per hole <br>
+                  2) Trench digging +$25 per square foot <br>
+                  3) Pressure Washing +$1 per square foot <br>
+                </p>
+              </div>
+              <hr class="dark horizontal my-0">
+              <div class="card-footer text-center">
+                <p class="font-weight-normal my-auto">Starting at $75</p>
               </div>
             </div>
           </div>
-          <div class="col-lg-6 col-12">
-            <div class="card card-profile mt-lg-4 mt-5 z-index-2">
-              <div class="row">
-                <div class="col-lg-4 col-md-6 col-12 mt-n5">
-                  <a href="javascript:;">
-                    <div class="p-3 pe-md-0">
-                      <img class="w-100 border-radius-md shadow-lg" src="{{ asset('img/ivana-square.jpg') }}" alt="image">
-                    </div>
-                  </a>
-                </div>
-                <div class="col-lg-8 col-md-6 col-12 my-auto">
-                  <div class="card-body ps-lg-0">
-                    <h5 class="mb-0">Marquez Garcia</h5>
-                    <h6 class="text-info">JS Developer</h6>
-                    <p class="mb-0">Artist is a term applied to a person who engages in an activity deemed to be an art.</p>
-                  </div>
-                </div>
+          <div class="col-lg-3">
+            <div class="card mb-5" data-animation="true" style="height: 450px">
+              <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+                <a class="d-block blur-shadow-image">
+                  <img src="{{ asset('img/products/product-3-min.jpg') }}" alt="img-blur-shadow" class="img-fluid shadow border-radius-lg">
+                </a>
+              </div>
+              <div class="card-body">
+                <h5 class="font-weight-normal mt-3 text-center">
+                  <a href="javascript:;">Small Projects</a>
+                </h5>
+                <p class="mb-0">
+                  Carpentry, electrical, plumbing and more coming soon, contact for more info
+                </p>
+              </div>
+              <hr class="dark horizontal my-0">
+              <div class="card-footer text-center">
+                <p class="font-weight-normal my-auto">Starting at $150</p>
               </div>
             </div>
           </div>
@@ -601,72 +650,95 @@
       </div>
     </section>
     <!-- -------- END Features w/ pattern background & stats & rocket -------- -->
-    <section class="pt-4 pb-6" id="count-stats">
+    <section class="mt-8 pt-4 pb-6" id="count-stats">
       <div class="container">
-        <div class="row mb-7">
-          <div class="col-lg-2 col-md-4 col-6 mb-4">
-            <img class="w-100 opacity-7" src="{{ asset('img/logos/gray-logos/logo-coinbase.svg') }}" alt="logo">
-          </div>
-          <div class="col-lg-2 col-md-4 col-6 mb-4">
-            <img class="w-100 opacity-7" src="{{ asset('img/logos/gray-logos/logo-nasa.svg') }}" alt="logo">
-          </div>
-          <div class="col-lg-2 col-md-4 col-6 mb-4">
-            <img class="w-100 opacity-7" src="{{ asset('img/logos/gray-logos/logo-netflix.svg') }}" alt="logo">
-          </div>
-          <div class="col-lg-2 col-md-4 col-6 mb-4">
-            <img class="w-100 opacity-7" src="{{ asset('img/logos/gray-logos/logo-pinterest.svg') }}" alt="logo">
-          </div>
-          <div class="col-lg-2 col-md-4 col-6 mb-4">
-            <img class="w-100 opacity-7" src="{{ asset('img/logos/gray-logos/logo-spotify.svg') }}" alt="logo">
-          </div>
-          <div class="col-lg-2 col-md-4 col-6 mb-4">
-            <img class="w-100 opacity-7" src="{{ asset('img/logos/gray-logos/logo-vodafone.svg') }}" alt="logo">
-          </div>
-        </div>
         <div class="row justify-content-center text-center">
           <div class="col-md-3">
             <h1 class="text-gradient text-info" id="state1" countTo="5234">0</h1>
-            <h5>Projects</h5>
-            <p>Of “high-performing” level are led by a certified project manager</p>
+            <h5>Work</h5>
+            <p>Completed works</p>
           </div>
           <div class="col-md-3">
             <h1 class="text-gradient text-info"><span id="state2" countTo="3400">0</span>+</h1>
             <h5>Hours</h5>
-            <p>That meets quality standards required by our users</p>
+            <p>Our working hours</p>
           </div>
           <div class="col-md-3">
             <h1 class="text-gradient text-info"><span id="state3" countTo="24">0</span>/7</h1>
-            <h5>Support</h5>
-            <p>Actively engage team members that finishes on time</p>
+            <h5>People</h5>
+            <p>Friends that trust us to work</p>
           </div>
         </div>
       </div>
     </section>
     <!-- -------- START PRE-FOOTER 1 w/ SUBSCRIBE BUTTON AND IMAGE ------- -->
-    <section class="my-5 pt-5">
+    <section class="my-5 pt-5" id="register">
       <div class="container">
         <div class="row">
           <div class="col-md-6 m-auto">
-            <h4>Be the first to see the news</h4>
-            <p class="mb-4">
-              Your company may not be in the software business,
-              but eventually, a software company will be in your business.
-            </p>
-            <div class="row">
-              <div class="col-8">
-                <div class="input-group input-group-outline">
-                  <label class="form-label">Email Here...</label>
-                  <input type="text" class="form-control mb-sm-0">
-                </div>
+            <div class="card card-plain">
+              <div class="card-header">
+                <h4 class="font-weight-bolder">Sign Up</h4>
+                <p class="mb-0">Enter your email and password to register</p>
               </div>
-              <div class="col-4 ps-0">
-                <button type="button" class="btn bg-gradient-info mb-0 h-100 position-relative z-index-2">Subscribe</button>
+              <div class="card-body">
+                <form role="form">
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <div class="input-group input-group-outline mb-3">
+                        <label class="form-label">Phone Number</label>
+                        <input type="text" class="form-control">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <div class="input-group input-group-outline mb-3">
+                        <label class="form-label">First Name</label>
+                        <input type="text" class="form-control">
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="input-group input-group-outline mb-3">
+                        <label class="form-label">Last Name</label>
+                        <input type="text" class="form-control">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <div class="input-group input-group-outline mb-3">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-control">
+                      </div>
+                      <div class="input-group input-group-outline mb-3">
+                        <label class="form-label">Password</label>
+                        <input type="password" class="form-control">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-check form-check-info text-start ps-0">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" checked>
+                    <label class="form-check-label" for="flexCheckDefault">
+                      I agree the <a href="javascript:;" class="text-dark font-weight-bolder">Terms and Conditions</a>
+                    </label>
+                  </div>
+                  <div class="text-center">
+                    <button type="button" class="btn btn-lg bg-gradient-success btn-lg w-100 mt-4 mb-0">Sign Up</button>
+                  </div>
+                </form>
+              </div>
+              <div class="card-footer text-center pt-0 px-lg-2 px-1">
+                <p class="mb-2 text-sm mx-auto">
+                  Already have an account?
+                  <a href="/login" class="text-success text-gradient font-weight-bold">Sign in</a>
+                </p>
               </div>
             </div>
           </div>
           <div class="col-md-5 ms-auto">
             <div class="position-relative">
-              <img class="max-width-50 w-100 position-relative z-index-2" src="{{ asset('img/macbook.png') }}" alt="image">
+              <img class="max-width-50 w-100 position-relative z-index-2" src="{{ asset ('img/illustrations/illustration-lock.jpg') }}" alt="image">
             </div>
           </div>
         </div>
@@ -676,7 +748,7 @@
   </div>
   <footer class="footer pt-5 mt-5">
     <div class="container">
-      <div class=" row">
+      {{-- <div class=" row">
         <div class="col-md-3 mb-4 ms-auto">
           <div>
             <a href="https://www.creative-tim.com/product/material-kit">
@@ -821,21 +893,18 @@
             </p>
           </div>
         </div>
-      </div>
+      </div> --}}
     </div>
   </footer>
   <!--   Core JS Files   -->
   <script src="{{ asset('js/core/popper.min.js" type="text/javascript') }}"></script>
   <script src="{{ asset('js/core/bootstrap.min.js') }}" type="text/javascript"></script>
-  <script src="{{ asset('js/plugins/perfect-scrollbar.min.js') }}"></script>
   <!--  Plugin for TypedJS, full documentation here: https://github.com/inorganik/CountUp.js -->
   <script src="{{ asset('js/plugins/countup.min.js') }}"></script>
-  <!--  Plugin for Parallax, full documentation here: https://github.com/wagerfield/parallax  -->
-  <script src="{{ asset('js/plugins/parallax.min.js') }}"></script>
+  <script src="{{ asset('js/plugins/perfect-scrollbar.min.js') }}"></script>
+  <script src="{{ asset('js/plugins/smooth-scrollbar.min.js') }}"></script>
   <!-- Control Center for Material UI Kit: parallax effects, scripts for the example pages etc -->
-  <!--  Google Maps Plugin    -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTTfWur0PDbZWPr7Pmq8K3jiDp0_xUziI"></script>
-  <script src="{{ asset('js/material-kit.min.js?v=3.0.2" type="text/javascript') }}"></script>
+  <script src="{{ asset('js/material-dashboard.min.js?v=3.0.4') }}"></script>
   <script>
     // get the element to animate
     var element = document.getElementById('count-stats');

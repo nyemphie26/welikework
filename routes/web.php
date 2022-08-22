@@ -43,3 +43,13 @@ Route::get('/accepted', function () {
 Route::get('/finished', function () {
     return view('Auth.finished.index');
 })->name('Finished Works');
+
+// ------- Customers
+Route::get('/customers', function () {
+    return view('Auth.customers.index');
+})->name('Customer List');
+
+// ------- Employees
+Route::get('/employees', function () {
+    return view('Auth.employees.index');
+})->name('Employee List');
