@@ -13,9 +13,7 @@
                 <div class="row p-3">
                   <div class="col-6"></div>
                   <div class="col-6 text-end">
-                    <a href="{{ route('Incoming Works Edit Add') }}">
-                      <button class="btn bg-gradient-primary" type="button">New Customer</button>
-                    </a>
+                    <button type="button" class="btn bg-gradient-primary" data-bs-toggle="modal" data-bs-target="#modal-form">New Customer</button>
                   </div>
                 </div>
                 <div class="table-responsive p-0">
@@ -139,97 +137,53 @@
 
     
     <!-- Modal -->
-    <div class="modal modal-lg fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title font-weight-normal" id="exampleModalLabel">John Michael - Mowing - Req Date ( 8/18/2022 )</h5>
-            <button type="button" class="btn-close text-dark" data-bs-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <div class="row">
-              <div class="col-lg-4">
-                <div class="input-group input-group-static mb-4">
-                    <label >Customer's Name</label>
-                    <input type="text" class="form-control" value="John Michael" readonly>
+    <div class="modal fade" id="modal-form" tabindex="-1" role="dialog" aria-labelledby="modal-form" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+              <div class="modal-body p-0">
+                <div class="card card-plain">
+                  <div class="card-header pb-0 text-left">
+                    <h3 class="font-weight-bolder text-success text-gradient">Add New Customer</h3>
+                  </div>
+                  <div class="card-body">
+                    <form role="form text-left">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="input-group input-group-outline mb-3">
+                                    <label class="form-label">First Name</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="input-group input-group-outline mb-3">
+                                    <label class="form-label">First Name</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="input-group input-group-outline mb-3">
+                                    <label class="form-label">Email</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="input-group input-group-outline mb-3">
+                                    <label class="form-label">Phone Number</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                      <div class="text-center">
+                        <button type="button" class="btn btn-round bg-gradient-secondary mt-4 mb-0" data-bs-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-round bg-gradient-success mt-4 mb-0">Save</button>
+                      </div>
+                    </form>
+                  </div>
                 </div>
               </div>
-              <div class="col-lg-4">
-                <div class="input-group input-group-static mb-4">
-                    <label >Email</label>
-                    <input type="text" class="form-control" value="john@creative-tim.com" readonly>
-                </div>
-              </div>
-              <div class="col-lg-4">
-                <div class="input-group input-group-static mb-4">
-                    <label >Phone Number</label>
-                    <input type="text" class="form-control" value="555 555 5555" readonly>
-                </div>
-              </div>
             </div>
-            <div class="row">
-                <div class="col-lg-3">
-                    <div class="input-group input-group-static mb-4">
-                        <label >Service Type</label>
-                        <input type="text" class="form-control" value="Mowing" readonly>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="input-group input-group-static mb-4">
-                        <label >Work Type</label>
-                        <input type="text" class="form-control" value="Bi Weekly" readonly>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="input-group input-group-static mb-4">
-                        <label >Requested Date</label>
-                        <input type="text" class="form-control" value="8/18/2022 - 10:00 AM" readonly>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="input-group input-group-static mb-4">
-                        <label >Total Fees</label>
-                        <input type="text" class="form-control" value="$80.00" readonly>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="input-group input-group-static mb-4">
-                        <label >Works / Pick Up Location</label>
-                        <input type="text" class="form-control" value="123 Main st" readonly>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="input-group input-group-static mb-4">
-                        <label >Drop Off Location</label>
-                        <input type="text" class="form-control" readonly>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="input-group input-group-static mb-4">
-                        <label >Customer's Note</label>
-                        <textarea class="form-control" rows="3" spellcheck="false" readonly>Call me when arrives home</textarea>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="input-group input-group-static mb-4">
-                        <label >Known Preference</label>
-                        <textarea class="form-control" rows="3" spellcheck="false" readonly>Muddy Land</textarea>
-                    </div>
-                </div>
-            </div>
-          </div>
-          <div class="modal-footer justify-content-center">
-            <button type="button" class="btn bg-gradient-danger">Reject</button>
-            <button type="button" class="btn bg-gradient-secondary" data-bs-dismiss="modal">Pending</button>
-            <button type="button" class="btn bg-gradient-success">Accept</button>
-          </div>
         </div>
-      </div>
     </div>
 @endsection
